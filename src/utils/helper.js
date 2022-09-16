@@ -34,7 +34,7 @@ export function validate(name, value) {
       let pass = document.querySelector("input[name=password]");
       if (!value || value.trim() === "") {
         return "re-enter your password";
-      } else if (pass !== value) {
+      } else if (pass?.value !== value) {
         return "The Passwords do not match";
       } else if (pass === value) {
         return "The Passwords match";
